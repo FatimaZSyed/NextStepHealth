@@ -1,0 +1,292 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f5f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.page-shell {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0 32px;
+}
+
+.hero {
+  padding: 44px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, #182848, #315f78);
+  color: white;
+  box-shadow: 0 20px 45px rgba(24, 40, 72, 0.18);
+}
+
+.hero h1 {
+  max-width: 720px;
+  margin: 8px 0 12px;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.05;
+}
+
+.hero-copy {
+  max-width: 660px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.05rem;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.panel,
+.result-card,
+.normal-card {
+  background: white;
+  border: 1px solid #e4e8f0;
+  box-shadow: 0 10px 30px rgba(30, 44, 71, 0.07);
+}
+
+.form-panel {
+  margin-top: 24px;
+  padding: 30px;
+  border-radius: 22px;
+}
+
+.panel-header h2,
+.section-title h2 {
+  margin: 0 0 6px;
+}
+
+.panel-header p {
+  margin: 0 0 24px;
+  color: #6c7483;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cfd6e3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.input-wrap:focus-within {
+  border-color: #315f78;
+  box-shadow: 0 0 0 3px rgba(49, 95, 120, 0.1);
+}
+
+.input-wrap input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 13px 14px;
+  background: transparent;
+}
+
+.unit {
+  padding: 0 14px;
+  color: #747d8f;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.primary-button,
+.secondary-button {
+  border: 0;
+  border-radius: 11px;
+  padding: 12px 18px;
+  font-weight: 800;
+}
+
+.primary-button {
+  background: #315f78;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #274d62;
+}
+
+.secondary-button {
+  background: #edf1f6;
+  color: #344054;
+}
+
+.error-message {
+  margin: 16px 0 0;
+  color: #b42318;
+  font-weight: 700;
+}
+
+.results-section {
+  margin-top: 38px;
+}
+
+.section-title {
+  margin-bottom: 18px;
+}
+
+.section-title .eyebrow {
+  color: #315f78;
+}
+
+.results-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.result-card {
+  padding: 26px;
+  border-radius: 20px;
+  border-left: 6px solid #cc7a00;
+}
+
+.result-card.high {
+  border-left-color: #b54708;
+}
+
+.result-card.low {
+  border-left-color: #175cd3;
+}
+
+.result-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.result-heading h3 {
+  margin: 5px 0 0;
+  font-size: 1.35rem;
+}
+
+.result-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: right;
+}
+
+.result-value span {
+  display: block;
+  margin-top: 2px;
+  color: #667085;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.meaning {
+  color: #475467;
+  line-height: 1.65;
+}
+
+.result-section {
+  margin-top: 20px;
+}
+
+.result-section h4 {
+  margin: 0 0 8px;
+}
+
+.result-section ul {
+  margin: 0;
+  padding-left: 22px;
+  color: #475467;
+  line-height: 1.6;
+}
+
+.urgent-box {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #fff6ed;
+}
+
+.urgent-box p {
+  margin: 5px 0 0;
+}
+
+.normal-card {
+  padding: 24px;
+  border-radius: 18px;
+}
+
+.normal-card h3,
+.normal-card p {
+  margin-top: 0;
+}
+
+.normal-card p {
+  margin-bottom: 0;
+  color: #667085;
+}
+
+.disclaimer {
+  margin-top: 32px;
+  padding: 18px 20px;
+  border-radius: 14px;
+  background: #eaf0f4;
+  color: #485563;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero,
+  .form-panel {
+    padding: 24px;
+  }
+
+  .result-heading {
+    flex-direction: column;
+  }
+
+  .result-value {
+    text-align: left;
+  }
+}
